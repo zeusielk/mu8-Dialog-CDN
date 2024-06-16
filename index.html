@@ -1927,6 +1927,50 @@
           }
         });
       }
+      
+     
+         // Block context menu
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        });
+
+        // Block common key shortcuts
+        document.addEventListener('keydown', function(event) {
+            if (
+                event.key === 'F12' || 
+                (event.ctrlKey && event.shiftKey && event.key === 'I') || 
+                (event.ctrlKey && event.shiftKey && event.key === 'J') || 
+                (event.ctrlKey && event.shiftKey && event.key === 'C') || 
+                (event.ctrlKey && event.key === 'U') || 
+                (event.ctrlKey && event.key === 'S') || 
+                (event.ctrlKey && event.key === 'H') || 
+                (event.ctrlKey && event.key === 'A') ||
+                (event.ctrlKey && event.key === 'E')
+            ) {
+                event.preventDefault();
+            }
+        });
+
+        // Detect and block if dev tools are open
+        (function() {
+            const devtools = { open: false };
+            const threshold = 160;
+            const element = new Image();
+            Object.defineProperty(element, 'id', {
+                get: function() {
+                    devtools.open = true;
+                    throw new Error('Dev tools open');
+                }
+            });
+
+            setInterval(function() {
+                devtools.open = false;
+                console.log(element);
+                if (devtools.open) {
+                    alert('Developer tools are open. Please close them to continue.');
+                }
+            }, 1000);
+        })();
     </script>
   </body>
 </html>

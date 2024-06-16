@@ -1,0 +1,1932 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      [data-tab-content] {
+        display: none;
+      }
+
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .active[data-tab-content] {
+        display: block;
+      }
+
+      body {
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .tabs {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid black;
+      }
+
+      .tab {
+        cursor: pointer;
+        padding: 20px;
+      }
+
+      .tab.active {
+        background-color: #ccc;
+      }
+
+      .tab:hover {
+        background-color: #aaa;
+      }
+
+      .tab-content {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .search-bar {
+        margin: 20px 0;
+        width: 300px;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 15px;
+      }
+
+      .card {
+        transition: transform 2s; /* Add a smooth transition effect */
+      }
+
+      .card:hover {
+        transform: perspective(800px) rotateY(720deg);
+      }
+
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .card {
+        width: 100px;
+        height: 150px;
+        border: 1px solid #ddd;
+        padding: 16px;
+        text-align: center;
+        margin: 16px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 4px;
+      }
+
+      .card a {
+        text-decoration: none;
+        color: inherit;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">ZEUS TV</h1>
+    <ul class="tabs">
+      <li data-tab-target="#home" class="active tab">𝙳𝙸𝙰𝙻𝙾𝙶 𝚃𝚅</li>
+      <li data-tab-target="#pricing" class="tab">𝙼𝙾𝙱𝙸𝚃𝙴𝙻 𝚃𝚅</li>
+      <li data-tab-target="#about" class="tab">𝙸𝙲𝙲 𝚆𝙲 2024</li>
+    </ul>
+
+    <div style="text-align: center">
+      <input
+        type="text"
+        class="search-bar"
+        placeholder="𝚂𝚎𝚊𝚛𝚌𝚑..."
+        oninput="filterCards()"
+      />
+    </div>
+
+    <div class="tab-content">
+      <div id="home" data-tab-content class="active">
+        <div class="card-container">
+          <div class="card" data-name="Rupawahini">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TWc9PQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/002.png"
+                alt="Image"
+              />
+              <p>Rupawahini</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="ITN">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TkE9PQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/004_200x200.png"
+                alt="Image"
+              />
+              <p>ITN</p>
+            </a>
+          </div>
+          <div class="card" data-name="Channel One">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVE9PQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/001.png"
+                alt="Image"
+              />
+
+              <p>Channel One</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Sirasa TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T0E9PQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/008.png"
+                alt="Image"
+              />
+
+              <p>Sirasa TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Vasantham TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TlE9PQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/005.png"
+                alt="Image"
+              />
+              <p>Vasantham TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Swarnawahini">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=Tnc9PQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/007.png"
+                alt="Image"
+              />
+              <p>Swarnawahini</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="TV One">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRBPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/010.png"
+                alt="Image"
+              />
+              <p>TV One</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Hiru TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRFPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/011.png"
+                alt="Image"
+              />
+              <p>Hiru TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="TNL">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRJPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/012.png"
+                alt="Image"
+              />
+              <p>TNL</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="TV Derana">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=Tmc9PQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/006.png"
+                alt="Image"
+              />
+              <p>TV Derana</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Ada Derana">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRRPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/014.png"
+                alt="Image"
+              />
+              <p>Ada Derana</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="TV Didula">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRjPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/017.png"
+                alt="Image"
+              />
+              <p>TV Didula</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Siyatha TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRVPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/015.png"
+                alt="Image"
+              />
+              <p>Siyatha TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Citi Hitz">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRrPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/019.png"
+                alt="Image"
+              />
+
+              <p>Citi Hitz</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Ridee TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRnPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/018.png"
+                alt="Image"
+              />
+              <p>Ridee TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Rangiri Sri Lanka">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TWpFPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/021.png"
+                alt="Image"
+              />
+              <p>Rangiri Sri Lanka</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Haritha TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRZPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/016.png"
+                alt="Image"
+              />
+              <p>Haritha TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Shakthi TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T1E9PQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/009.png"
+                alt="Image"
+              />
+              <p>Shakthi TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Supreme TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TWpBPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/118.png"
+                alt="Image"
+              />
+              <p>Supreme TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Jaya TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TWpVPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/4/Jayatv.png"
+                alt="Image"
+              />
+              <p>Jaya TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Nethra Tv">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TXc9PQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/nethra.jpg"
+                alt="Image"
+              />
+              <p>Nethra Tv</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Art Television">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRNPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/013.png"
+                alt="Image"
+              />
+              <p>Art Television</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Hi TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TWpJPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/121.png"
+                alt="Image"
+              />
+              <p>Hi TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Sony Sport Ten 5 HD">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRJMA==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/sony_sports_5.jpeg"
+                alt="Image"
+              />
+              <p>Sony Sport Ten 5 HD</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Erousport">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TmpjPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/071.png"
+                alt="Image"
+              />
+              <p>Erousport</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Star Sport 2">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TmprPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/074.png"
+                alt="Image"
+              />
+              <p>Star Sport 2</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Sony Sport Ten 2">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TmpZPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/sony_sports_2.jpeg"
+                alt="Image"
+              />
+              <p>Sony Sport Ten 2</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Ten Cricket">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TmpVPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/069.png"
+                alt="Image"
+              />
+              <p>Ten Cricket</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Sony Sport Ten 1">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TmpRPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/sony_sports_1.jpeg"
+                alt="Image"
+              />
+              <p>Sony Sport Ten 1</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Premier Sport HD">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRJMQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/129_PRE.png"
+                alt="Image"
+              />
+              <p>Premier Sport HD</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Papare HD">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRJMg==">
+              <img
+                src="https://s3.ap-southeast-1.amazonaws.com/dlg.dialog.lk/s3fs-public/2023-09/the-papare-logo.png"
+                alt="Image"
+              />
+              <p>Papare HD</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Sony Sport Ten 2 HD">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRJeg==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/sony_sports_2_HD.jpeg"
+                alt="Image"
+              />
+              <p>Sony Sport Ten 2 HD</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Star Sport HD 1">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRJdw==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/130.png"
+                alt="Image"
+              />
+              <p>Star Sport HD 1</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Star S Select HD 1">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRJeA==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/132.png"
+                alt="Image"
+              />
+              <p>Star S Select HD 1</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Star S Select HD 2">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRJeQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/133.png"
+                alt="Image"
+              />
+              <p>Star S Select HD 2</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Star Sport 1">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TmpnPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/073.png"
+                alt="Image"
+              />
+              <p>Star Sport 1</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Cinema World HD">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRFMg==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/087.png"
+                alt="Image"
+              />
+              <p>Cinema World HD</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Cinemax HD">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRFMw==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/084.png"
+                alt="Image"
+              />
+              <p>Cinemax HD</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="HBO HD">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRFMA==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/080.png"
+                alt="Image"
+              />
+              <p>HBO HD</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="HBO Family">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TnpFPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/083.png"
+                alt="Image"
+              />
+              <p>HBO Family</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="HBO Hits HD">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRFNA==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/082.png"
+                alt="Image"
+              />
+              <p>HBO Hits HD</p>
+            </a>
+          </div>
+          <div class="card" data-name="HBO Signature">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TnpBPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/081.png"
+                alt="Image"
+              />
+
+              <p>HBO Signature</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Hits Movies">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TnpNPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/086.png"
+                alt="Image"
+              />
+
+              <p>Hits Movies</p>
+            </a>
+          </div>
+          <div class="card" data-name="Sony Pix">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TnpRPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/sony_pix.jpeg"
+                alt="Image"
+              />
+
+              <p>Sony Pix</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="&Flix">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TnpJPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/085.png"
+                alt="Image"
+              />
+
+              <p>&Flix</p>
+            </a>
+          </div>
+          <div class="card" data-name="Star Movies Select HD">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRFNQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/126.png"
+                alt="Image"
+              />
+
+              <p>Star Movies Select HD</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Star Movies HD">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRFMQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/079.png"
+                alt="Image"
+              />
+              <p>Star Movies</p>
+            </a>
+          </div>
+          <div class="card" data-name="B4U Music">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TkRBPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/043.png"
+                alt="Image"
+              />
+
+              <p>B4U Music</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Channel C">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TkRJPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/045.png"
+                alt="Image"
+              />
+
+              <p>Channel C</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Sun Music">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TkRNPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/046.png"
+                alt="Image"
+              />
+              <p>Sun Music</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="VH1">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TkRFPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/044.png"
+                alt="Image"
+              />
+              <p>VH1</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Zing TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TkRRPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/117.png"
+                alt="Image"
+              />
+              <p>Zing TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="A Plus TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TkRnPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/052.png"
+                alt="Image"
+              />
+              <p>A Plus TV</p>
+            </a>
+          </div>
+          <div class="card" data-name="Baby TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TlRBPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/054.png"
+                alt="Image"
+              />
+              <p>Baby TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Cartoon Network">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TkRjPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/cartoon_network.png"
+                alt="Image"
+              />
+              <p>Cartoon Network</p>
+            </a>
+          </div>
+          <div class="card" data-name="Cbeebies">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TkRZPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/049.png"
+                alt="Image"
+              />
+              <p>Cbeebies</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Disney Jr">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TlRFPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/055.png"
+                alt="Image"
+              />
+              <p>Disney Jr</p>
+            </a>
+          </div>
+          <div class="card" data-name="Nickelodeon">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TkRrPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/053.png"
+                alt="Image"
+              />
+              <p>Nickelodeon</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Da Vinci">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TkRVPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/048.png"
+                alt="Image"
+              />
+              <p>Da Vinci</p>
+            </a>
+          </div>
+          <div class="card" data-name="Nick Jr">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TlRJPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/056.png"
+                alt="Image"
+              />
+              <p>Nick Jr</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="BBC Earth">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T0RNPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/057.png"
+                alt="Image"
+              />
+              <p>BBC Earth</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Animal Planet">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TlRVPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/059.png"
+                alt="Image"
+              />
+              <p>Animal Planet HD</p>
+            </a>
+          </div>
+          <div class="card" data-name="Discovery">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TlRZPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/060.png"
+                alt="Image"
+              />
+              <p>Discovery</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Discovery Seience">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TlRjPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/061.png"
+                alt="Image"
+              />
+              <p>Discovery Seience</p>
+            </a>
+          </div>
+          <div class="card" data-name="Euro News">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TXpjPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/067.png"
+                alt="Image"
+              />
+              <p>Euro News</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Food News">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TlRNPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/096.png"
+                alt="Image"
+              />
+              <p>Food News</p>
+            </a>
+          </div>
+          <div class="card" data-name="HGTV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TmpJPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/099.png"
+                alt="Image"
+              />
+              <p>HGTV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="History TV 18">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TmpBPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/065.png"
+                alt="Image"
+              />
+              <p>History TV 18</p>
+            </a>
+          </div>
+          <div class="card" data-name="Nat Geo">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TlRrPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/064.png"
+                alt="Image"
+              />
+              <p>Nat Geo</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="NGC Wild">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TlRRPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/058.png"
+                alt="Image"
+              />
+              <p>NGC Wild</p>
+            </a>
+          </div>
+          <div class="card" data-name="TLC">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TlRnPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/063.png"
+                alt="Image"
+              />
+              <p>TLC</p>
+            </a>
+          </div>
+          <div class="card" data-name="Travel XP">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TmpFPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/066.png"
+                alt="Image"
+              />
+              <p>Travel XP</p>
+            </a>
+          </div>
+          <div class="card" data-name="Animal Planet HD">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRFdw==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/127-Animal-Planet-HD.png"
+                alt="Image"
+              />
+              <p>Animal Planet HD</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Discovery HD World">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRBNQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/125.png"
+                alt="Image"
+              />
+              <p>Discovery HD World</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Al Jazeera">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TXpBPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/032.png"
+                alt="Image"
+              />
+              <p>Al Jazeera</p>
+            </a>
+          </div>
+          <div class="card" data-name="ABC Australia">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TXpFPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/033.png"
+                alt="Image"
+              />
+              <p>ABC Australia</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="BBC World">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TXpJPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/034.png"
+                alt="Image"
+              />
+              <p>BBC World</p>
+            </a>
+          </div>
+          <div class="card" data-name="CNN">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TXpRPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/036.png"
+                alt="Image"
+              />
+              <p>CNN</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="France 24">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TXpZPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/038.png"
+                alt="Image"
+              />
+              <p>France 24</p>
+            </a>
+          </div>
+          <div class="card" data-name="NDTV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TXpVPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/037.png"
+                alt="Image"
+              />
+              <p>NDTV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="CGTN">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TXpNPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/035.png"
+                alt="Image"
+              />
+              <p>CGTN</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Rock Entertainment HD">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRFeQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/095.png"
+                alt="Image"
+              />
+              <p>Rock Entertainment HD</p>
+            </a>
+          </div>
+          <div class="card" data-name="Comedy Central">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T0RJPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/098.png"
+                alt="Image"
+              />
+              <p>Comedy Central</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Colour Infinity">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TnprPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/094.png"
+                alt="Image"
+              />
+              <p>Colour Infinity</p>
+            </a>
+          </div>
+          <div class="card" data-name="Fashion TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T0RBPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/ftv-logo.jpg"
+                alt="Image"
+              />
+              <p>Fashion TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Fox Life">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T0RFPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/097.png"
+                alt="Image"
+              />
+              <p>Fox Life</p>
+            </a>
+          </div>
+          <div class="card" data-name="Warner TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TnpjPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/092.png"
+                alt="Image"
+              />
+              <p>Warner TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Zee Cafe">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TnpZPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/090.png"
+                alt="Image"
+              />
+              <p>Zee Cafe</p>
+            </a>
+          </div>
+          <div class="card" data-name="AXN">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TnpnPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/093.png"
+                alt="Image"
+              />
+              <p>AXN</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="AXN HD">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRFeA==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/128.png"
+                alt="Image"
+              />
+              <p>AXN HD</p>
+            </a>
+          </div>
+          <div class="card" data-name="Arirang TV">
+            <a
+              href="https://datafreetv.live/player.html?id=605e2b2a005d3062fe61d777&url=https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/Arirang.png"
+            >
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/Arirang.png"
+                alt="Image"
+              />
+              <p>Arirang TV 🚫</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="B4U Movies">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T1RBPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/114.png"
+                alt="Image"
+              />
+              <p>B4U Movies</p>
+            </a>
+          </div>
+          <div class="card" data-name="Colours">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T0RnPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/104.png"
+                alt="Image"
+              />
+              <p>Colours</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Sony Set">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T0RVPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/101.png"
+                alt="Image"
+              />
+              <p>Sony Set</p>
+            </a>
+          </div>
+          <div class="card" data-name="SET Max">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T0RZPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/102.png"
+                alt="Image"
+              />
+              <p>SET Max</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Star Gold">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T0RjPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/103.png"
+                alt="Image"
+              />
+              <p>Star Gold</p>
+            </a>
+          </div>
+          <div class="card" data-name="Zee Cinema">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T1RJPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/112.png"
+                alt="Image"
+              />
+              <p>Zee Cinema</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Star Gold Romance">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T1RFPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/113.png"
+                alt="Image"
+              />
+              <p>Star Gold Romance</p>
+            </a>
+          </div>
+          <div class="card" data-name="Star Plus">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T0RrPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/105.png"
+                alt="Image"
+              />
+              <p>Star Plus</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Colours Tamil">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T1RNPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/107.png"
+                alt="Image"
+              />
+              <p>Colours Tamil</p>
+            </a>
+          </div>
+          <div class="card" data-name="Kalaignar TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T1RjPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/111.png"
+                alt="Image"
+              />
+              <p>Kalaignar TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="K TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T1RVPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/109.png"
+                alt="Image"
+              />
+              <p>K TV</p>
+            </a>
+          </div>
+          <div class="card" data-name="Star Vijay">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T1RZPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/110.png"
+                alt="Image"
+              />
+              <p>Star Vijay</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Star Bharat">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T0RRPQ==">
+              <img
+                src="https://cdn.i.haymarketmedia.asia/?n=campaign-india/content/sb lead.png&h=570&w=855&q=100&v=20170226&c=1"
+                alt="Image"
+              />
+              <p>Star Bharat</p>
+            </a>
+          </div>
+          <div class="card" data-name="Sun TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T1RRPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/108.png"
+                alt="Image"
+              />
+              <p>Sun TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Zee Tamil">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T1RnPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/115.png"
+                alt="Image"
+              />
+              <p>Zee Tamil</p>
+            </a>
+          </div>
+          <div class="card" data-name="Sirippoli TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=T1RrPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/116.png"
+                alt="Image"
+              />
+              <p>Sirippoli TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Bloomberg">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TXpnPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/040.png"
+                alt="Image"
+              />
+              <p>Bloomberg</p>
+            </a>
+          </div>
+          <div class="card" data-name="CNBC">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TXprPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/041.png"
+                alt="Image"
+              />
+              <p>CNBC</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Buddhist TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TWpZPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/026.png"
+                alt="Image"
+              />
+              <p>Buddhist TV</p>
+            </a>
+          </div>
+          <div class="card" data-name="Damsathara TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TWpRPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/028.png"
+                alt="Image"
+              />
+              <p>Damsathara TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Sri Dalada Maligawa Telecast">
+            <a
+              href="https://datafreetv.live/player.html?id=sri-dalada-maligawa&url=https://pbs.twimg.com/profile_images/1573932614741766145/EAtDQ7eA_400x400.jpg"
+            >
+              <img
+                src="https://pbs.twimg.com/profile_images/1573932614741766145/EAtDQ7eA_400x400.jpg"
+                alt="Image"
+              />
+              <p>Sri Dalada Maligawa Telecast 🚫</p>
+            </a>
+          </div>
+          <div class="card" data-name="Swarga TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TWpnPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/030.png"
+                alt="Image"
+              />
+              <p>Swarga TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Pragna TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TWpNPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/029.png"
+                alt="Image"
+              />
+              <p>Pragna TV</p>
+            </a>
+          </div>
+          <div class="card" data-name="Shraddha TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TWpjPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/027.png"
+                alt="Image"
+              />
+              <p>Shraddha TV</p>
+            </a>
+          </div>
+          <div class="card" data-name="Verbum">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TWprPQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/031.png"
+                alt="Image"
+              />
+              <p>Verbum</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Guru TV">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRBdw==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/022.png"
+                alt="Image"
+              />
+              <p>Guru TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Nenasa Sinhala O/L">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRBMQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/22-Nenasa-Sinhala.png"
+                alt="Image"
+              />
+              <p>Nenasa Sinhala O/L</p>
+            </a>
+          </div>
+          <div class="card" data-name="Nenasa Tamil O/L">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRBMg==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/23-Nenasa-Tamil-OL.png"
+                alt="Image"
+              />
+              <p>Nenasa Tamil O/L</p>
+            </a>
+          </div>
+          <div class="card" data-name="Nenasa Sinhala A/L">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRBMw==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/NANASA10.png"
+                alt="Image"
+              />
+              <p>Nenasa Sinhala A/L</p>
+            </a>
+          </div>
+          <div class="card" data-name="Nenasa Tamil A/L">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRBNA==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/NANASA10.png"
+                alt="Image"
+              />
+              <p>Nenasa Tamil A/L</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Nenasa Sinhala Grade 1-5">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRBeA==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/22-Nenasa-Sinhala.png"
+                alt="Image"
+              />
+              <p>Nenasa Sinhala Grade 1-5</p>
+            </a>
+          </div>
+          <div class="card" data-name="Nenasa Tamil Grade 1-5">
+            <a href="https://watch.livecricketsl.xyz/dtv/watch.php?id=TVRBeQ==">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/22-Nenasa-Sinhala.png"
+                alt="Image"
+              />
+              <p>Nenasa Tamil Grade 1-5</p>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div id="pricing" data-tab-content>
+        <div class="card-container">
+          <div class="card" data-name="Nethra Tv">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=2">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/nethra.jpg"
+                alt="Image"
+              />
+
+              <p>Nethra Tv</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="ITN">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=3">
+              <img
+                src="https://images.sgp2.ott.kaltura.com/Service.svc/GetImage/p/3065/entry_id/7ce1dcb6b7f14307a139579b93cbdc8a_12/version/5/width/210/height/210/quality/80"
+                alt="Image"
+              />
+
+              <p>ITN</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="TV Derana">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=4">
+              <img
+                src="https://images.sgp2.ott.kaltura.com/Service.svc/GetImage/p/3065/entry_id/9e541c9621b74862a632c4d49f9d50d1_12/version/4/width/210/height/210/quality/80"
+                alt="Image"
+              />
+              <p>TV Derana</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Charana TV">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=5">
+              <img
+                src="https://mobond.yuppcdn.net/peotvgo/320/280/content/common/channel/logos/djwqoh.png"
+                alt="Image"
+              />
+              <p>Charana TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Swarnavahini">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=6">
+              <img
+                src="https://images.sgp2.ott.kaltura.com/Service.svc/GetImage/p/3065/entry_id/5e7b976c172a40abb6b0ab51e4635a5c_12/version/10/width/210/height/210/quality/80"
+                alt="Image"
+              />
+              <p>Swarnavahini</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Vasantham TV">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=7">
+              <img
+                src="https://images.sgp2.ott.kaltura.com/Service.svc/GetImage/p/3065/entry_id/06c75335ff654e73a6476fec2f7b0d91_12/version/3/width/240/height/240/quality/80"
+                alt="Vasantham TV"
+                alt="Image"
+              />
+              <p>Vasantham TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Siyatha TV">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=18">
+              <img
+                src="https://images.sgp2.ott.kaltura.com/Service.svc/GetImage/p/3065/entry_id/92a9b2ac04764d208c776af2b3183714_12/version/3/width/210/height/210/quality/80"
+                alt="Image"
+              />
+              <p>Siyatha TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Sirasa TV">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=9">
+              <img
+                src="https://images.sgp2.ott.kaltura.com/Service.svc/GetImage/p/3065/entry_id/b803a644f4534f38bbe24069af0ef4c8_12/version/3/width/240/height/240/quality/80"
+                alt="Image"
+              />
+              <p>Sirasa TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Shakthi TV">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=10">
+              <img
+                src="https://images.sgp2.ott.kaltura.com/Service.svc/GetImage/p/3065/entry_id/eca4a7242e0441dbbce9557269d56dba_12/version/4/width/240/height/240/quality/80"
+                alt="Image"
+              />
+              <p>Shakthi TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="TV One">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=11">
+              <img
+                src="https://images.sgp2.ott.kaltura.com/Service.svc/GetImage/p/3065/entry_id/d65cc393bec14c51b2cf3e7fd0571399_12/version/6/width/210/height/210/quality/80"
+                alt="Image"
+              />
+              <p>TV One</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="TNL">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=12">
+              <img
+                src="https://images.sgp2.ott.kaltura.com/Service.svc/GetImage/p/3065/entry_id/a050f65d50c04c2a9b8bff0769f4e1ac_12/version/4/width/210/height/210/quality/80"
+                alt="Image"
+              />
+              <p>TNL</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Channel Eye">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=15">
+              <img
+                src="https://mobond.yuppcdn.net/peotvgo/320/280/content/common/channel/logos/fhuhab.png"
+                alt="Image"
+              />
+
+              <p>Channel Eye</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Three Vision">
+            <a
+              href="https://moblive.yuppcdn.net/transsd/smil:knowledgetv.smil/playlist.m3u8"
+            >
+              <img
+                src="https://mobond.yuppcdn.net/peotvgo/320/180/content/common/channel/logos/dwuwdr.png"
+                alt="Image"
+              />
+              <p>Three Vision</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Hiru TV">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=16">
+              <img
+                src="https://images.sgp2.ott.kaltura.com/Service.svc/GetImage/p/3065/entry_id/a2375363567d4170aa93141ed7784c0a_12/version/5/width/210/height/210/quality/80"
+                alt="Image"
+              />
+              <p>Hiru TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Rupawahini">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=1">
+              <img
+                src="https://images.sgp2.ott.kaltura.com/Service.svc/GetImage/p/3065/entry_id/8065b1b3fb0045ad9afc7bebc17a198d_12/version/4/width/210/height/210/quality/80"
+                alt="Image"
+              />
+              <p>Rupawahini</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Jaya TV">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=31">
+              <img
+                src="https://images.sgp2.ott.kaltura.com/Service.svc/GetImage/p/3065/entry_id/66fd0f2bda094e80af54a4174eca007c_12/version/2/width/210/height/210/quality/80"
+                alt="Image"
+              />
+              <p>Jaya TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Ada Derana 24">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=13">
+              <img
+                src="https://images.sgp2.ott.kaltura.com/Service.svc/GetImage/p/3065/entry_id/c17aecb8d13f48cfa499116ba79a9631_12/version/8/width/210/height/210/quality/80"
+                alt="Image"
+              />
+              <p>Ada Derana 24</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Supreme TV">
+            <a
+              href="https://moblive.yuppcdn.net/trans1sd/smil:supremetv.smil/playlist.m3u8"
+            >
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/118.png"
+                alt="Image"
+              />
+              <p>Supreme TV 🚫</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Ten Cricket">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=25">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/069.png"
+                alt="Image"
+              />
+              <p>Ten Cricket</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Eurosport">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=24">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/071.png"
+                alt="Image"
+              />
+              <p>Eurosport</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Ten Sport 1">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=22">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/sony_sports_1.jpeg"
+                alt="Image"
+              />
+              <p>Ten Sport 1</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Ten Sport 2">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=26">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/sony_sports_2.jpeg"
+                alt="Image"
+              />
+              <p>Ten Sport 2</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Ten Sport 5">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=27">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/sony_sports_5.jpeg"
+                alt="Image"
+              />
+              <p>Ten Sport 5</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Star Sport 1">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=23">
+              <img
+                src="https://images.sgp2.ott.kaltura.com/Service.svc/GetImage/p/3065/entry_id/2eb32fc813d54ba1b5be1a20c7a7d3e5_12/version/5/width/210/height/210/quality/80"
+                alt="Image"
+              />
+              <p>Star Sport 1</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Star Sport 2">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=45">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/074.png"
+                alt="Image"
+              />
+              <p>Star Sport 2</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Times Now">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=39">
+              <img
+                src="https://www.slt.lk/sites/default/files/channel_images/162-TIMESNOW_0.jpg"
+                alt="Image"
+              />
+              <p>Times Now</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Al jazeera">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=19">
+              <img
+                src="https://d3hhg1rtk1dmrv.cloudfront.net/dialogdigitizationservices/productcatalogue/dtv/4/032.png"
+                alt="Image"
+              />
+              <p>Al jazeera</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="France 24">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=20">
+              <img
+                src="https://images.sgp2.ott.kaltura.com/Service.svc/GetImage/p/3065/entry_id/59ee1f5801de4f9ab4f3af686eca2961_12/version/5/width/210/height/210/quality/80"
+                alt="Image"
+              />
+              <p>France 24</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Star Tamil">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=8">
+              <img
+                src="https://www.slt.lk/sites/default/files/channel_images/008-Star%20Tamil_0.jpg"
+                alt="Image"
+              />
+              <p>Star Tamil</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Kalaignar TV">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=34">
+              <img
+                src="https://www.slt.lk/sites/default/files/channel_images/106-KalaignarTV_0%20%281%29.jpg"
+                alt="Image"
+              />
+              <p>Kalaignar TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Isaiaruvi TV">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=35">
+              <img
+                src="https://www.slt.lk/sites/default/files/channel_images/107-IsaiaruviTV_0%20%281%29.jpg"
+                alt="Image"
+              />
+              <p>Isaiaruvi TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Sirippoli TV">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=36">
+              <img
+                src="https://www.slt.lk/sites/default/files/channel_images/108-SirippoliTV%20%281%29.jpg"
+                alt="Image"
+              />
+              <p>Sirippoli TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="English Club TV">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=40">
+              <img
+                src="https://mobond.yuppcdn.net/peotvgo/320/180/content/common/channel/logos/pgldcz.png"
+                alt="Image"
+              />
+              <p>English Club TV1</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="DP Grade 6 - 8">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=41">
+              <img
+                src="https://mobond.yuppcdn.net/peotvgo/320/180/content/common/channel/logos/mtsiod.png"
+                alt="Image"
+              />
+              <p>DP Grade <br />6 - 8</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="DP Grade 9 - OL">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=42">
+              <img
+                src="https://mobond.yuppcdn.net/peotvgo/320/180/content/common/channel/logos/olxxcx.png"
+                alt="Image"
+              />
+              <p>DP Grade <br />9 - OL</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Sanda TV">
+            <a
+              href="https://moblive.yuppcdn.net/trans1sd/smil:sandatv.smil/playlist.m3u8"
+            >
+              <img
+                src="https://mobond.yuppcdn.net/peotvgo/320/180/content/common/channel/logos/qtdibj.png"
+                alt="Image"
+              />
+              <p>Sanda TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Music Plus TV">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=14">
+              <img
+                src="https://mobond.yuppcdn.net/peotvgo/320/180/content/common/channel/logos/music-television.png"
+                alt="Image"
+              />
+              <p>Music Plus TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="& flix">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=21">
+              <img
+                src="https://www.slt.lk/sites/default/files/channel_images/034-NFlix_0.jpg"
+                alt="Image"
+              />
+              <p>& flix</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Planet Fun">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=28">
+              <img
+                src="https://mobond.yuppcdn.net/peotvgo/320/180/content/common/channel/logos/planet-fun.png"
+                alt="Image"
+              />
+              <p>Planet Fun</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="The Buddhist">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=32">
+              <img
+                src="https://mobond.yuppcdn.net/peotvgo/320/180/content/common/channel/logos/the-buddhist.png"
+                alt="Image"
+              />
+              <p>The Buddhist</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Shraddha TV">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=33">
+              <img
+                src="https://mobond.yuppcdn.net/peotvgo/320/180/content/common/channel/logos/mvfdxj.png"
+                alt="Image"
+              />
+
+              <p>Shraddha TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Pragna TV">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=37">
+              <img
+                src="https://mobond.yuppcdn.net/peotvgo/320/180/content/common/channel/logos/pragna-tv.png"
+                alt="Image"
+              />
+
+              <p>Pragna TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Verbum TV">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=30">
+              <img
+                src="https://mobond.yuppcdn.net/peotvgo/320/180/content/common/channel/logos/verbum-tv.png"
+                alt="Image"
+              />
+
+              <p>Verbum TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Event TV Plus">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=38">
+              <img
+                src="https://www.slt.lk/sites/default/files/channel_images/120-EventTVPlus_0.jpg"
+                alt="Image"
+              />
+
+              <p>Event TV Plus</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Event TV">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=17">
+              <img
+                src="https://mobond.yuppcdn.net/peotvgo/320/280/content/common/channel/logos/event-tv.png"
+                alt="Image"
+              />
+              <p>Event TV</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Event TV Extra">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=43">
+              <img
+                src="https://www.slt.lk/sites/default/files/channel_images/220-EventTVXtra.jpg"
+                alt="Image"
+              />
+              <p>Event TV Extra</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Parliament Channel">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=29">
+              <img
+                src="https://mobond.yuppcdn.net/peotvgo/320/180/content/common/channel/logos/parliament-channel.png"
+                alt="Image"
+              />
+              <p>Parliament Channel</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="SLTMobitel">
+            <a href="https://watch.livecricketsl.xyz/peotvgo/peotvgo.php?id=44">
+              <img
+                src="https://mobond.yuppcdn.net/peotvgo/320/180/content/common/channel/logos/twkwpt.png"
+                alt="Image"
+              />
+              <p>SLTMobitel</p>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div id="about" data-tab-content>
+        <div class="card-container">
+          <div class="card" data-name="TV One">
+            <a
+              href="https://d1kyt65q9mhz2w.cloudfront.net/cd5697ea4f494162b6dd3eec55fa99f0/index.m3u8"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/f/f6/TV-1_LOGO.png"
+                alt="Image"
+              />
+
+              <p>TV One</p>
+              <p style="color: red">𝙳𝚊𝚝𝚊</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Sky Sport Cricket">
+            <a href="https://live2.notebulk.xyz/uk_sscricket/index.m3u8">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGA9ND-MGrzIXSPfKuWG5H5Vnq1layowvXDQ&s"
+                alt="Image"
+              />
+              <p>Sky Sport Cricket</p>
+              <p style="color: red">𝙳𝚊𝚝𝚊</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Star 4K">
+            <a
+              href="http://176.119.29.52/live/00:1A:79:00:02:27/SN_1697176356/102423.m3u8"
+            >
+              <img
+                src="https://static.wikia.nocookie.net/logopedia/images/9/92/Star_Gold_4K.png"
+                alt="Image"
+              />
+
+              <p>Star 4K</p>
+              <p style="color: red">𝙳𝚊𝚝𝚊</p>
+            </a>
+          </div>
+
+          <div class="card" data-name="Astro Cricket">
+            <a href="https://allinonereborn.tech/allinone.php?id=51939">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Astro_Cricket.png"
+                alt="Image"
+              />
+
+              <p>Astro Cricket</p>
+              <p style="color: red">𝙳𝚊𝚝𝚊</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p><center>Copyright © 2024</center></p>
+    <center>
+      <a href="https://t.me/ThugXzeuS" target="_blank">
+        <img
+          src="https://hitwebcounter.com/counter/counter.php?page=11032533&style=0038&nbdigits=4&type=page&initCount=0"
+          title="Counter Widget"
+          alt="Visit counter For Websites"
+          border="0"
+      /></a>
+    </center>
+
+    <script>
+      const tabs = document.querySelectorAll("[data-tab-target]");
+      const tabContents = document.querySelectorAll("[data-tab-content]");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const target = document.querySelector(tab.dataset.tabTarget);
+          tabContents.forEach((tabContent) => {
+            tabContent.classList.remove("active");
+          });
+          tabs.forEach((tab) => {
+            tab.classList.remove("active");
+          });
+          tab.classList.add("active");
+          target.classList.add("active");
+        });
+      });
+    </script>
+
+    <script>
+      function filterCards() {
+        const searchInput = document
+          .querySelector(".search-bar")
+          .value.toLowerCase();
+        const cards = document.querySelectorAll(".card");
+
+        cards.forEach((card) => {
+          const cardName = card.dataset.name.toLowerCase();
+          if (cardName.includes(searchInput)) {
+            card.style.display = "flex";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
